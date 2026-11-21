@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: spark-interactive
+  namespace: data-platform
+spec:
+  serviceAccountName: spark-driver
+  restartPolicy: Never
+  containers:
+    - name: python
+      image: mi-data-runtime:3.5.7
+      imagePullPolicy: IfNotPresent
+      command:
+        - sleep
+        - infinity
+      env:
+        - name: AWS_ACCESS_KEY_ID
+          valueFrom:
+            secretKeyRef:
+              name: lakehouse-s3
+              key: AWS_ACCESS_KEY_ID
+        - name: AWS_SECRET_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              name: lakehouse-s3
+              key: AWS_SECRET_ACCESS_KEY

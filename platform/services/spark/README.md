@@ -1,0 +1,1 @@
+# Spark on Kubernetes\n\nEjecución bajo demanda en modo cluster. Driver y Executors efímeros; no hay masters/workers permanentes. SparkPi probado con `apache/spark:3.5.7`.\n

@@ -1,0 +1,1 @@
+# Usuarios y grupos\n\nDocumentar identidades humanas y grupos. La autenticación depende de la configuración del clúster; no equivale a crear usuarios Linux.\n

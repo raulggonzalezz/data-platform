@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: delta-launcher
+  namespace: data-platform
+spec:
+  serviceAccountName: spark-driver
+  restartPolicy: Never
+  containers:
+    - name: spark-submit
+      image: mi-data-runtime:3.5.7
+      imagePullPolicy: IfNotPresent
+      command:
+        - /opt/spark/bin/spark-submit
+      args:
+        - --master
+        - k8s://https://kubernetes.default.svc:443
+        - --deploy-mode
+        - cluster
+        - --properties-file
+        - /etc/spark/spark-defaults.conf
+        - local:///app/job.py
+      volumeMounts:
+        - name: spark-config
+          mountPath: /etc/spark
+          readOnly: true
+  volumes:
+    - name: spark-config
+      configMap:
+        name: delta-spark-config

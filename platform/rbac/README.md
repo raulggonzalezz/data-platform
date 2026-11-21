@@ -1,0 +1,1 @@
+# RBAC de plataforma\n\nRoles y bindings de operaciones de plataforma, separados de permisos de personas y workloads de proyectos.\n

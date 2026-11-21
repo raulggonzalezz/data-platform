@@ -1,0 +1,1 @@
+# Plantillas de proyectos\n\nPlantillas reutilizables. Se decidirá Kustomize u otra herramienta al definir los primeros manifiestos reales.\n

@@ -1,0 +1,1 @@
+# Almacenamiento\n\nSeaweedFS proporciona el servicio S3 compartido en el laboratorio.\n

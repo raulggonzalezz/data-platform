@@ -1,0 +1,1 @@
+# Imágenes\n\nImágenes base aprobadas y catálogo. Los trabajos pueden usar imágenes derivadas.\n

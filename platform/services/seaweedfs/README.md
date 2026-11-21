@@ -1,0 +1,1 @@
+# SeaweedFS\n\nInstalado con Helm en `seaweedfs`, chart 4.54.0. Endpoint interno `http://seaweedfs-s3.seaweedfs.svc.cluster.local:8333`. Incorporar valores saneados y manifiestos renderizados en una fase posterior; no guardar claves.\n

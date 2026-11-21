@@ -1,0 +1,1 @@
+# Helm\n\nValores versionados y saneados para servicios compartidos. Nunca guardar secretos reales.\n

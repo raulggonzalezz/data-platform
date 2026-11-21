@@ -1,0 +1,1 @@
+# Namespaces\n\nNamespaces compartidos. Los namespaces de proyectos se definirán mediante plantillas en `projects/templates/`.\n

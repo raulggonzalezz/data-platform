@@ -1,0 +1,1 @@
+# Cuotas\n\nResourceQuota y LimitRange de referencia. Las cuotas concretas se definirán por proyecto.\n

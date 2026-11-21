@@ -1,0 +1,1 @@
+# Plataforma compartida\n\nManifiestos y configuración de servicios y políticas comunes. Aún no se incluyen manifiestos estáticos definitivos.\n

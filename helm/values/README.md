@@ -1,0 +1,1 @@
+# Valores Helm\n\nIncorporar aquí los valores revisados de los releases. El fichero local de SeaweedFS debe sanearse antes de copiarlo al repositorio.\n

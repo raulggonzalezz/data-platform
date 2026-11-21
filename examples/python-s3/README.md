@@ -1,0 +1,1 @@
+# Cliente Python S3\n\nEjemplo reservado para validar acceso S3 desde Python sin Spark. Se añadirá cuando se elija el cliente y sus dependencias. Endpoint interno: `http://seaweedfs-s3.seaweedfs.svc.cluster.local:8333`. Las credenciales se suministrarán en runtime.\n

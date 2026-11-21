@@ -1,0 +1,25 @@
+FROM mi-data-runtime:3.5.7
+
+USER root
+
+# Git para clonar repositorios
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends git \
+    && rm -rf /var/lib/apt/lists/*
+
+# JupyterLab y kernel de Python
+RUN pip3 install --no-cache-dir \
+    "jupyterlab==4.0.13" \
+    "ipykernel==6.29.5"
+
+# Registrar el kernel de Python
+RUN python3 -m ipykernel install \
+    --prefix=/usr/local \
+    --name pyspark \
+    --display-name "Python (PySpark)"
+
+# Directorios temporales de Jupyter
+ENV JUPYTER_RUNTIME_DIR=/tmp/jupyter-runtime
+ENV JUPYTER_CONFIG_DIR=/tmp/jupyter-config
+
+USER spark

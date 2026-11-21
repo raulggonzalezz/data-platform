@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+*.secret.yaml
+secrets/
+.private/
+.terraform/
+*.tfstate*
+*.log
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

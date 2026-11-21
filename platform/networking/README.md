@@ -1,0 +1,1 @@
+# Red\n\nNetworkPolicies y configuración de red. Diseñar reglas explícitas; el namespace no bloquea por sí solo el tráfico.\n

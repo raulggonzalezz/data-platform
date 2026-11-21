@@ -1,0 +1,1 @@
+# Imágenes base\n\nUna carpeta por runtime; registrar versiones y componentes en `catalog.yaml`.\n

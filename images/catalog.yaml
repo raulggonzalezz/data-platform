@@ -1,0 +1,29 @@
+schemaVersion: 1
+images:
+  - id: spark-runtime
+    displayName: Runtime de datos con Spark
+    status: planned
+    baseImage: apache/spark:3.5.7
+    targetImage: mi-data-runtime:3.5.7
+    components:
+      spark: "3.5.7"
+      java: "Temurin 11.0.27 (observado)"
+      scala: "2.12.18"
+      python: "3.8.10 (observado)"
+      pyspark: "Incluido con Spark"
+      py4j: "0.10.9.7"
+      hadoopClient: "3.3.4"
+      hadoopAws: "pendiente de incorporar y validar"
+      awsSdk: "pendiente de verificar contra POM hadoop-aws 3.3.4"
+      deltaLake: "3.3.x previsto; artefactos pendientes de validar"
+    notes:
+      - "No incluir credenciales en la imagen."
+      - "Driver y Executors deben usar la misma imagen."
+      - "Añadir solo dependencias específicas requeridas por cada trabajo."
+  - id: spark4-reference
+    displayName: Referencia futura Spark 4
+    status: reference-only
+    baseImage: apache/spark:4.3.0-java17
+    components:
+      spark: "4.3.0"
+      java: "Temurin 17.0.21 (observado)"

@@ -1,0 +1,1 @@
+# PostgreSQL\n\nServicio previsto/por confirmar. Hay imagen local `postgres:15`, pero verificar el despliegue real antes de catalogarlo como activo.\n

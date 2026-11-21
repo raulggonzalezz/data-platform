@@ -1,0 +1,1 @@
+# Plantillas RBAC\n\nPlantillas Role/RoleBinding para grupos humanos. Separar de ServiceAccounts de workloads.\n

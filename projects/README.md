@@ -1,0 +1,1 @@
+# Proyectos\n\nCada proyecto tendrá namespace, RBAC, cuotas, políticas de red, ServiceAccounts y referencias a secretos.\n

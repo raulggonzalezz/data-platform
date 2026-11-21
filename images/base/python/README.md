@@ -1,0 +1,1 @@
+# Runtime Python\n\nReservado para una futura imagen Python ligera si se demuestra que aporta valor frente al runtime común Spark.\n

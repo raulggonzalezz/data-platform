@@ -1,0 +1,1 @@
+# Runtime Spark\n\nBase de referencia `apache/spark:3.5.7`. Hadoop AWS/AWS SDK y Delta deben integrarse y validarse antes de publicar una imagen propia.\n

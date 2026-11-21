@@ -1,0 +1,44 @@
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: working
+  namespace: data-platform
+  labels:
+    app: working
+spec:
+  serviceAccountName: spark-driver
+  restartPolicy: Always
+  containers:
+    - name: working
+      image: mi-data-working:3.5.7
+      imagePullPolicy: IfNotPresent
+      ports:
+        - name: jupyter
+          containerPort: 8888
+      env:
+        - name: AWS_ACCESS_KEY_ID
+          valueFrom:
+            secretKeyRef:
+              name: lakehouse-s3
+              key: AWS_ACCESS_KEY_ID
+        - name: AWS_SECRET_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              name: lakehouse-s3
+              key: AWS_SECRET_ACCESS_KEY
+        - name: POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+      command:
+        - bash
+        - -lc
+        - jupyter lab --ip=0.0.0.0 --port=8888 --no-browser
+      resources:
+        requests:
+          cpu: "500m"
+          memory: "1Gi"
+        limits:
+          cpu: "2"
+          memory: "3Gi"

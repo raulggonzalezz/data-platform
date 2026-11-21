@@ -168,5 +168,18 @@ spark-submit \
   --master k8s://https://kubernetes.default.svc:443 \
   --deploy-mode client \
   --properties-file examples/delta-lake/spark-defaults.conf \
+  --conf spark.driver.host="$POD_IP" \
+  --conf spark.driver.bindAddress=0.0.0.0 \
   examples/delta-lake/job.py
+```
+
+$POD_IP no se sustituye bien en spark-defaults.conf, por ese motivo lo ponemos en linea.
+
+Podemos usar este script submit.sh para simplificar
+
+```
+./examples/delta-lake/submit.sh \
+  examples/delta-lake/job.py \
+  --fecha 2026-11-22 \
+  --modo incremental
 ```
